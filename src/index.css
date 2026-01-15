@@ -1,0 +1,10 @@
+@import 'tailwindcss';
+
+@layer utilities {
+  .drag-region {
+    -webkit-app-region: drag;
+  }
+  .drag-none {
+    -webkit-app-region: no-drag;
+  }
+}

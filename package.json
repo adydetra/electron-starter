@@ -1,0 +1,71 @@
+{
+  "name": "electron-starter",
+  "version": "1.0.0",
+  "description": "Electron Starter Template",
+  "author": "adydetra",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "concurrently \"vite\" \"bun run dev:electron\"",
+    "dev:vite": "vite",
+    "dev:electron": "electron ./electron/main.cjs",
+    "build:renderer": "vite build",
+    "build:win": "bun run build:renderer && bunx electron-builder@24.6.3 --win",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "build": {
+    "appId": "com.adydetra.electronstarter",
+    "artifactName": "Electron Starter.${ext}",
+    "productName": "Electron Starter",
+    "files": [
+      "dist/",
+      "electron/",
+      "build/icon.ico",
+      "config.json",
+      "package.json"
+    ],
+    "directories": {
+      "output": "release",
+      "buildResources": "build"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "icon.ico",
+      "uninstallerIcon": "icon.ico",
+      "installerHeader": "installerHeader.bmp",
+      "installerSidebar": "installerSidebar.bmp",
+      "uninstallerSidebar": "uninstallerSidebar.bmp",
+      "uninstallDisplayName": "Electron Starter",
+      "deleteAppDataOnUninstall": true,
+      "include": "build/installer.nsh"
+    }
+  },
+  "dependencies": {
+    "@iconify/react": "^6.0.2",
+    "@tailwindcss/vite": "^4.1.18",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "tailwindcss": "^4.1.18"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "@types/react": "^19.2.8",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.2",
+    "concurrently": "^9.2.1",
+    "electron": "^39.2.7",
+    "eslint": "^9.39.2",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.26",
+    "globals": "^17.0.0",
+    "vite": "^7.3.1"
+  }
+}
