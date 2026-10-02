@@ -40,6 +40,31 @@ The output installer will be in the `release/` directory.
 
 ---
 
+## Project Structure
+
+```text
+├── build/
+├── docs/
+├── electron/
+│   ├── main.cjs
+│   └── preload.cjs
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── atoms/
+│   │   ├── molecules/
+│   │   └── organisms/
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── AGENTS.md
+├── index.html
+├── package.json
+└── vite.config.js
+```
+
+---
+
 ## 🛠 Tech Stack
 
 - **[Electron](https://www.electronjs.org/)** – Cross-platform desktop application framework
