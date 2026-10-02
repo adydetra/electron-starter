@@ -6,6 +6,51 @@ A modern, high-performance starter template built with **Electron**, **React**, 
 
 ---
 
+## 🛠 Tech Stack
+
+- **[Electron](https://www.electronjs.org/)** – Cross-platform desktop application framework
+- **[Vite](https://vitejs.dev/)** – Next Generation Frontend Tooling
+- **[React 19](https://react.dev/)** – The library for web and native user interfaces
+- **[Tailwind CSS 4](https://tailwindcss.com/)** – Utility-first CSS framework
+- **[Iconify](https://iconify.design/)** – Unified Open Source Icons
+
+---
+
+## ✨ Features
+
+- ⚡ **Hot Module Replacement (HMR)** for both Renderer and Main processes
+- 🎨 **Tailwind CSS v4** configured with `@tailwindcss/vite`
+- 🪟 **Custom Title Bar** & Window Controls (Minimize, Maximize, Close)
+- 🔒 **Secure IPC Communication** (Context Isolation enabled)
+- 📦 **Electron Builder** ready for Windows packaging
+
+---
+
+## Project Structure
+
+```text
+├── build/
+├── docs/
+├── electron/
+│   ├── main.cjs
+│   └── preload.cjs
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── atoms/
+│   │   ├── molecules/
+│   │   └── organisms/
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── AGENTS.md
+├── index.html
+├── package.json
+└── vite.config.js
+```
+
+---
+
 ## 🚀 Getting Started
 
 ### Requirements
@@ -37,51 +82,6 @@ bun run build:win
 ```
 
 The output installer will be in the `release/` directory.
-
----
-
-## Project Structure
-
-```text
-├── build/
-├── docs/
-├── electron/
-│   ├── main.cjs
-│   └── preload.cjs
-├── public/
-├── src/
-│   ├── components/
-│   │   ├── atoms/
-│   │   ├── molecules/
-│   │   └── organisms/
-│   ├── App.jsx
-│   ├── index.css
-│   └── main.jsx
-├── AGENTS.md
-├── index.html
-├── package.json
-└── vite.config.js
-```
-
----
-
-## 🛠 Tech Stack
-
-- **[Electron](https://www.electronjs.org/)** – Cross-platform desktop application framework
-- **[Vite](https://vitejs.dev/)** – Next Generation Frontend Tooling
-- **[React 19](https://react.dev/)** – The library for web and native user interfaces
-- **[Tailwind CSS 4](https://tailwindcss.com/)** – Utility-first CSS framework
-- **[Iconify](https://iconify.design/)** – Unified Open Source Icons
-
----
-
-## ✨ Features
-
-- ⚡ **Hot Module Replacement (HMR)** for both Renderer and Main processes
-- 🎨 **Tailwind CSS v4** configured with `@tailwindcss/vite`
-- 🪟 **Custom Title Bar** & Window Controls (Minimize, Maximize, Close)
-- � **Secure IPC Communication** (Context Isolation enabled)
-- � **Electron Builder** ready for Windows packaging
 
 ---
 
